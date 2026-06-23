@@ -1,0 +1,56 @@
+Development:                          Operations:
+- Code writing                         - Deployment
+- Testing                              - Monitoring
+- Debugging                            - Scaling
+- Version control                      - Infrastructure management
+- Continuous Integration (CI)         - Continuous Deployment (CD)
+- Code reviews                         - Incident response
+- Use of version control systems (e.g., Git) - Use of infrastructure as code (e.g., Terraform)
+
+Jenkins:- An open-source automation server used for continuous integration and continuous delivery (CI/CD).
+- Automates the building, testing, and deployment of applications.
+- Supports a wide range of plugins for various tools and technologies.
+- Provides a web interface for managing and monitoring CI/CD pipelines.
+- Enables developers to focus on writing code while Jenkins handles the automation of the build and deployment processes.
+Docker:- A platform that allows developers to create, deploy, and run applications in containers.
+- Containers are lightweight, portable, and consistent environments that can run on any system with Docker installed
+- Simplifies the deployment process by packaging applications and their dependencies together.
+- Enables developers to easily share and distribute applications across different environments.
+- Provides isolation and resource management for applications, improving security and performance.
+Kubernetes:- An open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
+- Provides a framework for running distributed systems resiliently.
+- Manages the lifecycle of containers, including deployment, scaling, and updates.
+- Offers features like load balancing, service discovery, and self-healing capabilities.
+- Enables developers to focus on building applications while Kubernetes handles the operational aspects of running and managing containers.
+AWS (Amazon Web Services):- A comprehensive cloud computing platform that provides a wide range of services for computing, storage, databases, networking, and more.
+- Offers scalable and flexible infrastructure for hosting applications and services.
+- Provides various tools and services for deployment, monitoring, and management of applications in the cloud.
+- Enables developers to leverage the benefits of cloud computing, such as scalability, reliability, and cost-effectiveness.
+- Supports a wide range of programming languages and frameworks, making it suitable for various types of applications and workloads.
+Terraform:- An open-source infrastructure as code (IaC) tool that allows developers to define and provision infrastructure using a declarative configuration language.
+- Enables developers to manage infrastructure as code, making it easier to version, share, and collaborate on infrastructure configurations.
+- Supports multiple cloud providers, including AWS, Azure, and Google Cloud, allowing for multi-cloud deployments.
+- Provides a consistent and repeatable way to provision and manage infrastructure resources.
+- Enables developers to automate the provisioning and management of infrastructure, reducing manual effort and improving efficiency.
+Ansible:- An open-source automation tool that allows developers to automate the configuration, deployment, and management of applications and infrastructure.
+- Uses a simple, human-readable language (YAML) to define automation tasks.
+- Supports a wide range of modules for various tasks, such as configuration management, application deployment,
+and orchestration.
+- Enables developers to automate repetitive tasks, improving efficiency and reducing the risk of human error.    
+
+DevOps tools:-
+- Jenkins
+- Docker - A platform that allows developers to create, deploy, and run applications in containers.
+- Kubernetes - An open-source container orchestration platform that automates the deployment, scaling, and management of containerized applications.
+- AWS (Amazon Web Services)
+- Terraform
+- Ansible - An open-source automation tool that allows developers to automate the configuration, deployment, and management of applications and infrastructure.
+- Git
+- Nagios
+- Prometheus
+- Grafana
+- Splunk
+- ELK Stack (Elasticsearch, Logstash, Kibana)
+- maven - A build automation tool primarily used for Java projects.
+- selenium - An open-source framework for automating web browsers, commonly used for testing web applications.
+- chef - A configuration management tool that allows developers to define infrastructure as code and automate the provisioning and management of servers.
