@@ -2,7 +2,13 @@
 
 apt update -y
 
-apt install -y python3-pip nodejs npm nginx git
+apt install -y \
+python3 \
+python3-pip \
+nodejs \
+npm \
+nginx \
+git
 
 cd /home/ubuntu
 

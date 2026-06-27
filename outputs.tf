@@ -1,11 +1,21 @@
 output "public_ip" {
 
-  value = aws_instance.app_server.public_ip
+  value = aws_instance.app.public_ip
 
 }
 
 output "ssh_command" {
+  value = "ssh -i aws-single-ec2-key.pem ubuntu@${aws_instance.app.public_ip}"
+}
 
-  value = "ssh -i ~/.ssh/id_rsa ubuntu@${aws_instance.app_server.public_ip}"
+output "website" {
+  value = "http://${aws_instance.app.public_ip}"
+}
 
+output "frontend" {
+  value = "http://${aws_instance.app.public_ip}:3000"
+}
+
+output "backend" {
+  value = "http://${aws_instance.app.public_ip}:5000"
 }
