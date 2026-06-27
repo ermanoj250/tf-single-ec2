@@ -5,7 +5,7 @@ var path = require("path");
 
 app.set('view engine', 'ejs');
 
-const URL = process.env.BACKEND_URL || "http://43.204.102.54:8000/api";
+const URL = process.env.BACKEND_URL || "BACKEND_URL=http://43.204.102.54:5000/api";
 
 const fetch = (...args) => 
     import('node-fetch').then(({default: fetch}) => fetch(...args));
