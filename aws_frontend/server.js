@@ -1,38 +1,43 @@
-//express app that serves html pages
-var  express = require("express");
-var app = express();
-var path = require("path");
+const express = require("express");
+const path = require("path");
 
-app.set('view engine', 'ejs');
+const app = express();
 
-const URL = process.env.BACKEND_URL || "BACKEND_URL=http://43.204.102.54:5000/api";
+// Set EJS as the view engine
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
-const fetch = (...args) => 
-    import('node-fetch').then(({default: fetch}) => fetch(...args));
+// Backend URL (same EC2 instance)
+const URL = process.env.BACKEND_URL || "http://127.0.0.1:5000/api";
 
-app.get("/", async function (req, res) {
+// For Node.js 18+, you can use the built-in fetch.
+// If you prefer node-fetch, keep your existing import instead.
+// const fetch = (...args) =>
+//     import("node-fetch").then(({ default: fetch }) => fetch(...args));
+
+app.get("/", async (req, res) => {
     try {
-        const response = await fetch(URL, {
-            method: "GET",
-            headers: {
-                "Content-Type": "application/json"
-            }
-        });
+        const response = await fetch(URL);
 
-        const data = await response.json();
+        if (!response.ok) {
+            throw new Error(`Backend returned ${response.status}`);
+        }
 
-        console.log(data);
+        const result = await response.json();
+
+        console.log(result);
 
         res.render("index", {
-            data: data.data.data
+            data: result.data.data
         });
 
     } catch (error) {
-        console.log("error:", error);
+        console.error("Error:", error.message);
         res.status(500).send("Error fetching data from backend");
     }
-});     
+});
 
-app.listen(3000,"0.0.0.0", function () {
+// Start Express server
+app.listen(3000, "0.0.0.0", () => {
     console.log("Frontend running on port 3000");
 });
