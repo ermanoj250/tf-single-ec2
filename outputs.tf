@@ -5,7 +5,7 @@ output "public_ip" {
 }
 
 output "ssh_command" {
-  value = "ssh -i aws-single-ec2-key.pem ubuntu@${aws_instance.app.public_ip}"
+  value = "ssh -i terraform-key.pem ubuntu@${aws_instance.app.public_ip}"
 }
 
 output "website" {
